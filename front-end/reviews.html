@@ -96,7 +96,7 @@
 
 
         function getReviews(storeId, productId) {
-            url = `URL/reviews/${storeId}/${productId}`;
+            url = `https://saibharatlen-8080.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/reviews/${storeId}/${productId}`;
             fetch(url, {
                 method: "GET",
                 headers: { "content-type": "application/json" }

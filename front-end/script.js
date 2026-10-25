@@ -1,7 +1,8 @@
-const apiURL = '';
+const apiURL = 'https://saibharatlen-8080.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai';
 let students = [];
 let Ordercount = 1;
 let deleteRow = [];
+let productId;
 
 function resetForm() {
     const inputs = document.querySelectorAll("#myform input:not([type='submit']), #myform select");
@@ -405,6 +406,7 @@ async function createData(products, storeId) {
 
 
 function viewProductByid(productId) {
+    if (!productId) return;
 
     let url = `${apiURL}/product/product/${productId}`;
     fetch(url, {
